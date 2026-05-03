@@ -1,11 +1,27 @@
-# Cloudflare Pages Deploy
+# Cloudflare Deploy
 
-Este projeto e um site estatico para Cloudflare Pages. O build gera a pasta `dist`
-com apenas os arquivos publicos que devem ser publicados.
+Este projeto e um site estatico. O build gera a pasta `dist` com apenas os
+arquivos publicos que devem ser publicados.
 
-## Configuracao no Cloudflare Pages
+## Configuracao atual: Workers Static Assets
 
-Use estas configuracoes no dashboard do Cloudflare:
+Os logs do Cloudflare mostram o fluxo de Workers Builds, que executa
+`npx wrangler deploy`. Para esse fluxo, use:
+
+```txt
+Build command: npm run build
+Deploy command: npx wrangler deploy
+Root directory: /
+```
+
+O arquivo `wrangler.jsonc` aponta `assets.directory` para `./dist`, entao o
+deploy sabe exatamente qual pasta publicar.
+
+## Alternativa: Cloudflare Pages
+
+Se o projeto for criado especificamente como Cloudflare Pages, use estas
+configuracoes no dashboard:
+
 
 ```txt
 Framework preset: None
@@ -14,9 +30,6 @@ Build output directory: dist
 Deploy command: deixe em branco
 Root directory: /
 ```
-
-Nao use `npx wrangler deploy` neste projeto. Esse comando e para Workers e gera o
-erro `Missing entry-point to Worker script or to assets directory`.
 
 Se o dashboard exigir um comando de deploy customizado, use:
 
