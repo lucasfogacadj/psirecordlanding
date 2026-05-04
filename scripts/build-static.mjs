@@ -11,6 +11,7 @@ const requiredEntries = [
   "script.js",
   "robots.txt",
   "sitemap.xml",
+  "politica-de-privacidade",
   "assets",
 ];
 
