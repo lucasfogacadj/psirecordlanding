@@ -245,8 +245,8 @@ summary:focus-visible {
 .hero h1 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 5.5rem;
-  line-height: 0.92;
+  font-size: 4.55rem;
+  line-height: 0.96;
   letter-spacing: 0;
 }
 
@@ -824,7 +824,7 @@ summary:focus-visible {
   }
 
   .hero h1 {
-    font-size: 4.7rem;
+    font-size: 4rem;
   }
 
   .hero p {
@@ -917,7 +917,7 @@ summary:focus-visible {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 
   .hero p,
