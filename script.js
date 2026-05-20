@@ -11,7 +11,7 @@ function applyTheme(theme) {
   }
 }
 
-applyTheme(storedTheme || "dark");
+applyTheme(storedTheme || "light");
 
 toggleButton?.addEventListener("click", () => {
   applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
