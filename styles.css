@@ -1522,7 +1522,11 @@ summary:focus-visible {
 .product-hero {
   position: relative;
   isolation: isolate;
-  align-content: end;
+  grid-template-columns: minmax(420px, 0.72fr) minmax(680px, 1fr);
+  align-items: center;
+  align-content: center;
+  gap: 44px;
+  width: min(1360px, calc(100% - 56px));
   min-height: calc(100dvh - var(--nav-height));
   padding-block: 70px 56px;
 }
@@ -1540,14 +1544,14 @@ summary:focus-visible {
 .product-hero .hero-copy {
   position: relative;
   z-index: 2;
-  max-inline-size: 690px;
+  max-inline-size: 520px;
   padding-block: 34px 12px;
 }
 
 .product-hero h1 {
   max-inline-size: 8em;
-  font-size: 7.2rem;
-  line-height: 0.86;
+  font-size: 5.9rem;
+  line-height: 0.9;
 }
 
 .product-hero .hero-copy > p {
@@ -1555,14 +1559,15 @@ summary:focus-visible {
 }
 
 .app-preview-stage {
-  position: absolute;
-  inset: 62px 0 50px auto;
-  z-index: -1;
+  position: relative;
+  inset: auto;
+  z-index: 1;
   display: flex;
   align-items: end;
   justify-content: flex-end;
-  inline-size: min(76%, 880px);
-  pointer-events: none;
+  inline-size: 100%;
+  min-inline-size: 0;
+  pointer-events: auto;
 }
 
 .app-preview-stage::before {
@@ -1578,7 +1583,7 @@ summary:focus-visible {
   position: relative;
   inline-size: 100%;
   max-inline-size: 860px;
-  transform: translateX(54px);
+  transform: none;
 }
 
 .app-window-body {
@@ -1769,13 +1774,18 @@ summary:focus-visible {
 }
 
 @media (max-width: 1180px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+    align-content: start;
+  }
+
   .app-preview-stage {
-    inline-size: min(74%, 760px);
-    opacity: 0.92;
+    inline-size: 100%;
+    opacity: 1;
   }
 
   .app-window {
-    transform: translateX(28px);
+    max-inline-size: none;
   }
 
   .dashboard-snapshot {
@@ -1795,26 +1805,12 @@ summary:focus-visible {
 
 @media (max-width: 980px) {
   .product-hero {
-    align-content: start;
     padding-block: 42px 44px;
   }
 
   .product-hero::after,
   .app-preview-stage::before {
     display: none;
-  }
-
-  .app-preview-stage {
-    position: relative;
-    inset: auto;
-    z-index: 1;
-    inline-size: 100%;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .app-window {
-    transform: none;
   }
 
   .product-hero .hero-copy {
