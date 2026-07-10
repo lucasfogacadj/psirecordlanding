@@ -7,35 +7,50 @@
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta
       name="description"
-      content="PsiRecord reúne agenda, pacientes, sessões, transcrição, evolução clínica revisável, instrumentos, documentos, financeiro, site profissional e administração para psicologia."
+      content="Agenda, prontuário, sessões, transcrição e evolução revisável, documentos e financeiro em um fluxo conectado para profissionais de psicologia."
     />
-    <meta name="theme-color" content="#f7f5f1" />
+    <meta name="theme-color" content="#f7f5f1" data-theme-color />
+    <meta name="color-scheme" content="light dark" />
     <link rel="canonical" href="https://psirecord.com.br/" />
-    <link rel="icon" href="./assets/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/app-icon-32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/app-icon-16.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="./assets/psirecord-mark.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/app-icon-180.png" />
     <link rel="stylesheet" href="./styles.css" />
+
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="PsiRecord" />
-    <meta property="og:title" content="PsiRecord | Sistema operacional para a rotina psicológica" />
+    <meta property="og:title" content="PsiRecord | Gestão clínica para psicólogos e clínicas" />
     <meta
       property="og:description"
-      content="Da agenda ao registro: pacientes, sessões, transcrição, evolução revisável, instrumentos, documentos, financeiro e gestão administrativa em uma única rotina."
+      content="Da agenda ao registro final: uma rotina clínica conectada, com IA revisável e a profissional sempre no controle."
     />
     <meta property="og:url" content="https://psirecord.com.br/" />
     <meta property="og:image" content="https://psirecord.com.br/assets/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="PsiRecord - rotina clínica, registro psicológico e gestão operacional" />
+    <meta property="og:image:alt" content="PsiRecord — da agenda ao registro final em um só fluxo" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PsiRecord | Sistema operacional para a rotina psicológica" />
+    <meta name="twitter:title" content="PsiRecord | Gestão clínica para psicólogos e clínicas" />
     <meta
       name="twitter:description"
-      content="Agenda, pacientes, sessões, transcrição, evolução clínica revisável, documentos, financeiro e administração para psicologia."
+      content="Agenda, prontuário, sessões, evolução revisável, documentos e financeiro em um fluxo conectado para psicologia."
     />
     <meta name="twitter:image" content="https://psirecord.com.br/assets/og-image.png" />
+
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem("psirecord_landing_theme");
+          const preferred = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.dataset.theme = saved === "dark" || saved === "light" ? saved : preferred;
+        } catch {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -53,9 +68,7 @@
             "name": "PsiRecord",
             "url": "https://psirecord.com.br/",
             "inLanguage": "pt-BR",
-            "publisher": {
-              "@id": "https://psirecord.com.br/#organization"
-            }
+            "publisher": { "@id": "https://psirecord.com.br/#organization" }
           },
           {
             "@type": "SoftwareApplication",
@@ -63,34 +76,21 @@
             "name": "PsiRecord",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Web",
-            "description": "PsiRecord organiza a rotina psicológica com agenda, pacientes, sessões, captura, transcrição, evolução clínica revisável, instrumentos, documentos, financeiro, site profissional e administração auditável.",
+            "description": "PsiRecord conecta agenda, pacientes, sessões, transcrição, evolução clínica revisável, instrumentos, documentos, financeiro e gestão para profissionais de psicologia.",
             "featureList": [
-              "Cadastro, busca e histórico de pacientes",
-              "Ficha clínica, anamnese e contextos opcionais por paciente",
-              "Agenda visual com mês, semana, dia, histórico e recorrência",
-              "Confirmações de sessão com mensagem transacional revisável",
-              "Captura online por extensão e modo presencial por microfone autorizado",
-              "Upload de áudio, transcrição, anotações, insights e evolução revisável",
-              "Instrumentos clínicos versionados com scoring determinístico e revisão humana",
-              "Evolução longitudinal e relatórios por paciente",
-              "Modelos documentais, placeholders, preview e exportação",
-              "Site profissional público com leads consentidos",
-              "Financeiro operacional, baixas, ajustes, cobrança e exportação CSV",
-              "Plano, créditos de IA, ledger e bloqueios antes do processamento",
-              "Painel administrativo, usuários, auditoria, exportações e suporte com impersonação controlada"
+              "Agenda clínica com recorrência, conflitos e confirmações",
+              "Pacientes, anamnese, prontuário e histórico organizado",
+              "Captura online, presencial ou por upload autorizado",
+              "Transcrição, evolução e insights com revisão profissional",
+              "Instrumentos clínicos e documentos revisáveis",
+              "Financeiro operacional e site profissional",
+              "Papéis de acesso, auditoria e gestão de equipes"
             ],
             "audience": {
               "@type": "Audience",
-              "audienceType": "Psicólogas, psicólogos, clínicas e equipes de atendimento psicológico"
+              "audienceType": "Psicólogas, psicólogos, consultórios e clínicas de psicologia"
             },
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "description": "Entre em contato para conhecer o PsiRecord."
-            },
-            "publisher": {
-              "@id": "https://psirecord.com.br/#organization"
-            }
+            "publisher": { "@id": "https://psirecord.com.br/#organization" }
           },
           {
             "@type": "FAQPage",
@@ -99,50 +99,50 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "O PsiRecord substitui a decisão clínica?",
+                "name": "A IA decide diagnóstico ou conduta?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Não. Transcrições, rascunhos, instrumentos e relatórios são apoio revisável. A profissional continua responsável por validar o registro final."
+                  "text": "Não. Transcrições, evoluções, insights e pontuações são materiais de apoio e exigem revisão profissional."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Quais partes da rotina o PsiRecord cobre hoje?",
+                "name": "O PsiRecord funciona para atendimento online e presencial?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Agenda, pacientes, prontuários, sessões, captura de áudio, transcrição, evolução, instrumentos, documentos, confirmações, financeiro, site profissional, plano, perfil, configurações e administração."
+                  "text": "Sim. O fluxo suporta captura online, microfone presencial autorizado e upload manual de áudio."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Os instrumentos clínicos geram diagnóstico automático?",
+                "name": "A secretaria consegue ver o prontuário?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Não. Eles calculam pontuações e faixas conforme regras versionadas, mas o resultado é apoio de triagem e exige revisão humana."
+                  "text": "Não por padrão. O papel de secretaria é restrito à agenda e às confirmações."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Secretaria ou suporte acessam conteúdo clínico?",
+                "name": "Preciso usar o Google Calendar?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "O acesso é separado por papel. Rotinas de secretaria ficam voltadas a agenda e confirmações, e ações sensíveis exigem permissão adequada, justificativa e auditoria."
+                  "text": "Não. A integração é opcional e a agenda do PsiRecord funciona de forma independente."
                 }
               },
               {
                 "@type": "Question",
-                "name": "O site profissional publica dados de paciente?",
+                "name": "O financeiro substitui um sistema fiscal?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Não. O site profissional é uma página pública sanitizada para apresentação da profissional e captação de leads consentidos."
+                  "text": "Não. O financeiro é operacional e acompanha contas, pagamentos, ajustes, cobranças e relatórios."
                 }
               },
               {
                 "@type": "Question",
-                "name": "O PsiRecord funciona para atendimento presencial e online?",
+                "name": "Como conheço os planos?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sim. O fluxo suporta captura online com extensão e modo presencial com microfone autorizado, além de upload manual de áudio quando necessário."
+                  "text": "Converse com a equipe pelo WhatsApp para conhecer a solução e as condições disponíveis."
                 }
               }
             ]
@@ -150,444 +150,440 @@
         ]
       }
     </script>
-    <title>PsiRecord | Sistema operacional para a rotina psicológica</title>
+    <title>PsiRecord | Gestão clínica para psicólogos e clínicas</title>
   </head>
+
   <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path d="M6 3v4M18 3v4M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z" />
+      </symbol>
+      <symbol id="icon-mic" viewBox="0 0 24 24">
+        <rect x="9" y="3" width="6" height="12" rx="3" />
+        <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M9 21h6" />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path d="M6 3h8l4 4v14H6Z" />
+        <path d="M14 3v5h5M9 13h6M9 17h5" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 3 4.5 6v5.5c0 4.5 2.8 7.7 7.5 9.5 4.7-1.8 7.5-5 7.5-9.5V6Z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="3" />
+        <path d="M3.5 20v-2.2c0-3 2.2-5 5.5-5s5.5 2 5.5 5V20M15 6.2A3 3 0 0 1 15 12M16 13c2.8.4 4.5 2.2 4.5 4.8V20" />
+      </symbol>
+      <symbol id="icon-spark" viewBox="0 0 24 24">
+        <path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4ZM18 14l.8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8ZM6 14l.7 1.8 1.8.7-1.8.7L6 19l-.7-1.8-1.8-.7 1.8-.7Z" />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="5" y="10" width="14" height="11" rx="2" />
+        <path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3" />
+      </symbol>
+      <symbol id="icon-wallet" viewBox="0 0 24 24">
+        <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H18v16H6.5A2.5 2.5 0 0 1 4 17.5Z" />
+        <path d="M4 7h14M14 11h6v5h-6a2.5 2.5 0 0 1 0-5Z" />
+      </symbol>
+      <symbol id="icon-site" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M3 9h18M7 6.5h.01M10 6.5h.01" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+      </symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24">
+        <path d="M20.5 15.4A8.5 8.5 0 0 1 8.6 3.5 8.5 8.5 0 1 0 20.5 15.4Z" />
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+    </svg>
+
     <header class="site-nav" aria-label="Navegação principal">
-      <a class="brand" href="#inicio" aria-label="PsiRecord">
-        <img src="./assets/app-icon-128.png" alt="" aria-hidden="true" />
-        <span>
-          <strong>PsiRecord</strong>
-          <small>Rotina clínica e gestão</small>
-        </span>
-      </a>
+      <div class="nav-inner">
+        <a class="brand" href="#inicio" aria-label="PsiRecord — início">
+          <img src="./assets/psirecord-mark.svg" width="36" height="36" alt="" aria-hidden="true" />
+          <span>
+            <strong>PsiRecord</strong>
+            <small>Clínica em fluxo</small>
+          </span>
+        </a>
 
-      <nav class="nav-links" aria-label="Seções da página">
-        <a href="#funcionalidades">Funcionalidades</a>
-        <a href="#fluxo">Fluxo clínico</a>
-        <a href="#operacao">Operação</a>
-        <a href="#cuidado">Segurança</a>
-        <a href="#duvidas">Dúvidas</a>
-      </nav>
+        <nav class="nav-links" aria-label="Seções da página">
+          <a href="#beneficios">Benefícios</a>
+          <a href="#produto">Produto</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#seguranca">Segurança</a>
+          <a href="#duvidas">Dúvidas</a>
+        </nav>
 
-      <div class="nav-actions">
-        <button class="ghost-button" type="button" data-theme-toggle>Tema escuro</button>
-        <a class="primary-button" href="https://sistema.psirecord.com.br/login">Entrar</a>
+        <div class="nav-actions">
+          <button class="icon-button theme-toggle-desktop" type="button" data-theme-toggle aria-label="Ativar tema escuro">
+            <svg class="icon theme-icon theme-icon-sun"><use href="#icon-sun"></use></svg>
+            <svg class="icon theme-icon theme-icon-moon"><use href="#icon-moon"></use></svg>
+          </button>
+          <a class="login-link" href="https://sistema.psirecord.com.br/login">Entrar</a>
+          <a
+            class="button button-primary nav-cta"
+            href="https://wa.me/5551998961483?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20PsiRecord."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conhecer
+          </a>
+          <button
+            class="icon-button menu-toggle"
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Abrir menu"
+          >
+            <svg class="icon menu-icon-open"><use href="#icon-menu"></use></svg>
+            <svg class="icon menu-icon-close"><use href="#icon-close"></use></svg>
+          </button>
+        </div>
       </div>
+
+      <nav class="mobile-menu" id="mobile-menu" data-mobile-menu aria-label="Navegação móvel" hidden>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#produto">Produto</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#seguranca">Segurança</a>
+        <a href="#duvidas">Dúvidas</a>
+        <div class="mobile-menu-actions">
+          <a class="button button-secondary" href="https://sistema.psirecord.com.br/login">Entrar no sistema</a>
+          <button class="button button-secondary" type="button" data-theme-toggle>
+            <svg class="icon theme-icon theme-icon-sun"><use href="#icon-sun"></use></svg>
+            <svg class="icon theme-icon theme-icon-moon"><use href="#icon-moon"></use></svg>
+            <span data-theme-label>Tema escuro</span>
+          </button>
+        </div>
+      </nav>
     </header>
 
-    <main id="inicio">
-      <section class="hero product-hero" aria-labelledby="hero-title">
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <span class="eyebrow">Para psicólogas, clínicas e equipes que querem operar com rastreabilidade</span>
-          <h1 id="hero-title">PsiRecord</h1>
-          <p>
-            Agenda, prontuário, sessão, IA revisável, documentos e gestão clínica em um só fluxo.
-          </p>
-          <p class="seo-summary">
-            Pacientes, áudio, transcrição, evolução, instrumentos, financeiro, site profissional e administração auditável.
+          <span class="eyebrow"><i aria-hidden="true"></i> Para profissionais e clínicas de psicologia</span>
+          <h1 id="hero-title">Da agenda ao registro final, sua rotina clínica <em>em um só fluxo.</em></h1>
+          <p class="hero-lead">
+            O PsiRecord reúne agenda, pacientes, prontuário, sessões, documentos e financeiro, com IA revisável para apoiar o registro sem substituir seu julgamento clínico.
           </p>
 
           <div class="hero-actions">
-            <a class="primary-button large" href="#funcionalidades">Ver módulos</a>
-            <a class="ghost-button large" href="#fluxo">Entender o fluxo</a>
+            <a
+              class="button button-primary button-large"
+              href="https://wa.me/5551998961483?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20PsiRecord."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Quero conhecer o PsiRecord
+              <svg class="icon"><use href="#icon-arrow"></use></svg>
+            </a>
+            <a class="button button-secondary button-large" href="#como-funciona">Ver como funciona</a>
           </div>
 
-          <div class="proof-row" aria-label="Módulos principais">
-            <span>Agenda</span>
-            <span>Pacientes</span>
-            <span>Sessões</span>
-            <span>Prontuários</span>
-            <span>Modelos</span>
-            <span>Financeiro</span>
-            <span>Site profissional</span>
-            <span>Admin</span>
-          </div>
+          <ul class="hero-trust" aria-label="Características principais">
+            <li><svg class="icon"><use href="#icon-check"></use></svg> Online e presencial</li>
+            <li><svg class="icon"><use href="#icon-check"></use></svg> Revisão humana</li>
+            <li><svg class="icon"><use href="#icon-check"></use></svg> Acesso por papéis</li>
+          </ul>
         </div>
 
-        <div class="product-preview app-preview-stage" aria-label="Prévia do painel do PsiRecord">
-          <div class="window app-window">
-            <div class="window-bar">
-              <span></span>
-              <span></span>
-              <span></span>
+        <div class="hero-visual" aria-label="Representação da agenda clínica no PsiRecord">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="product-window">
+            <div class="product-window-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
               <strong>PsiRecord · consultório</strong>
             </div>
+            <img
+              src="./assets/landing-visual-agenda.jpg"
+              width="1200"
+              height="760"
+              alt="Agenda semanal do PsiRecord com próximas sessões, confirmações e pendências"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
 
-            <div class="window-body app-window-body">
-              <aside class="mini-sidebar" aria-hidden="true">
-                <div class="mini-brand">
-                  <img src="./assets/app-icon-48.png" alt="" />
-                  <span>PsiRecord</span>
-                </div>
-                <div class="mini-nav is-active"><span>I</span><strong>Início</strong></div>
-                <div class="mini-nav"><span>P</span><strong>Pacientes</strong></div>
-                <div class="mini-nav"><span>R</span><strong>Prontuários</strong></div>
-                <div class="mini-nav"><span>S</span><strong>Sessões</strong></div>
-                <div class="mini-nav"><span>M</span><strong>Modelos</strong></div>
-                <div class="mini-nav"><span>A</span><strong>Agenda</strong></div>
-                <div class="mini-nav"><span>F</span><strong>Financeiro</strong></div>
-              </aside>
-
-              <div class="preview-content">
-                <div class="preview-header">
-                  <div>
-                    <span>Bem-vinda · quarta, 08 jul</span>
-                    <strong>Próxima sessão, pendências e módulos em uma visão</strong>
-                  </div>
-                  <span class="status-pill">front atual</span>
-                </div>
-
-                <div class="dashboard-snapshot" aria-hidden="true">
-                  <article class="snapshot-card snapshot-card-featured">
-                    <span>Próxima sessão</span>
-                    <strong>10:00 · 50 min</strong>
-                    <small>modo sessão, captura, notas e revisão</small>
-                  </article>
-                  <article class="snapshot-card">
-                    <span>Pacientes ativos</span>
-                    <strong>Ficha + histórico</strong>
-                  </article>
-                  <article class="snapshot-card">
-                    <span>Para revisar</span>
-                    <strong>Transcrição e evolução</strong>
-                  </article>
-                  <article class="snapshot-card">
-                    <span>Agenda</span>
-                    <strong>Semana, recorrência e confirmação</strong>
-                  </article>
-                </div>
-
-                <div class="artifact-grid product-artifacts">
-                  <article class="artifact is-wide">
-                    <span>Workspace clínico</span>
-                    <p>Gravação online ou presencial, upload, anotações, instrumentos, transcrição, evolução e insights no mesmo contexto da sessão.</p>
-                    <div class="stage-rail" aria-hidden="true">
-                      <i>Preparar</i>
-                      <i>Atender</i>
-                      <i>Gerar</i>
-                      <i>Revisar</i>
-                      <i>Concluir</i>
-                    </div>
-                  </article>
-                  <article class="artifact">
-                    <span>Documentos</span>
-                    <strong>Modelos CFP, placeholders e exportação</strong>
-                  </article>
-                  <article class="artifact">
-                    <span>Administração</span>
-                    <strong>Clínicas, papéis, auditoria e suporte</strong>
-                  </article>
-                </div>
-              </div>
-            </div>
+          <div class="floating-note floating-note-review" aria-hidden="true">
+            <span class="icon-tile"><svg class="icon"><use href="#icon-spark"></use></svg></span>
+            <span><small>Evolução clínica</small><strong>Rascunho pronto para revisar</strong></span>
+          </div>
+          <div class="floating-note floating-note-control" aria-hidden="true">
+            <svg class="icon"><use href="#icon-shield"></use></svg>
+            <span><small>Controle humano</small><strong>Você aprova o registro final</strong></span>
           </div>
         </div>
       </section>
 
-      <section class="section band feature-overview visual-showcase" id="funcionalidades" aria-labelledby="features-title">
-        <div class="section-heading">
-          <span class="eyebrow">Produto em uso</span>
-          <h2 id="features-title">A rotina da clínica aparece em telas claras, não em módulos soltos</h2>
+      <section class="principles" aria-label="Princípios do PsiRecord">
+        <article>
+          <span class="principle-number">01</span>
+          <div><strong>Captura autorizada</strong><p>Online, presencial ou por upload, sempre dentro do contexto da sessão.</p></div>
+        </article>
+        <article>
+          <span class="principle-number">02</span>
+          <div><strong>Rascunhos claros</strong><p>Transcrição, evolução e insights entram como material de apoio revisável.</p></div>
+        </article>
+        <article>
+          <span class="principle-number">03</span>
+          <div><strong>Decisão humana</strong><p>A profissional edita, confirma e só então conclui o registro clínico.</p></div>
+        </article>
+      </section>
+
+      <section class="section section-problem" id="beneficios" aria-labelledby="benefits-title">
+        <div class="section-intro section-intro-split">
+          <div>
+            <span class="eyebrow">Continuidade de ponta a ponta</span>
+            <h2 id="benefits-title">Seu atendimento não precisa terminar em uma rotina espalhada entre abas, arquivos e planilhas.</h2>
+          </div>
           <p>
-            O PsiRecord reúne agenda, atendimento, evolução, documentos e administração com a mesma linguagem visual do front atual.
+            Quando agenda, anotações, evolução, documentos e cobrança vivem separados, o trabalho perde continuidade. O PsiRecord conecta essas etapas mantendo você no controle.
           </p>
         </div>
 
-        <div class="visual-grid" aria-label="Telas ilustradas do PsiRecord">
-          <article class="visual-card visual-card-wide">
-            <figure class="visual-frame">
-              <img
-                src="./assets/landing-visual-agenda.jpg"
-                width="1200"
-                height="760"
-                alt="Tela do PsiRecord com agenda semanal, próxima sessão e fluxo de confirmação"
-                loading="eager"
-                decoding="async"
-              />
-            </figure>
-            <div class="visual-card-copy">
-              <span>Agenda clínica</span>
-              <h3>Semana, confirmações e próximos atendimentos em uma visão</h3>
-              <p>O painel mostra a rotina do dia sem esconder pendências importantes.</p>
-              <div class="feature-tags" aria-label="Recursos de agenda">
-                <span>Recorrência</span>
-                <span>Conflitos</span>
-                <span>Confirmações</span>
-                <span>Histórico</span>
-              </div>
+        <div class="journey-grid">
+          <article class="journey-card journey-card-featured">
+            <span class="card-icon"><svg class="icon"><use href="#icon-calendar"></use></svg></span>
+            <span class="eyebrow">Antes do atendimento</span>
+            <h3>Comece o dia sabendo o que vem agora e o que ficou pendente.</h3>
+            <p>Organize pacientes, recorrências, conflitos de horário, confirmações e anamnese digital.</p>
+            <div class="mini-agenda" aria-hidden="true">
+              <span><i>08:00</i><strong>Preparar sessão</strong><small>contexto revisado</small></span>
+              <span class="is-active"><i>10:00</i><strong>Atendimento</strong><small>próxima ação</small></span>
+              <span><i>14:30</i><strong>Confirmar agenda</strong><small>2 pendências</small></span>
             </div>
           </article>
 
-          <article class="visual-card">
-            <figure class="visual-frame">
+          <article class="journey-card">
+            <span class="card-icon"><svg class="icon"><use href="#icon-mic"></use></svg></span>
+            <span class="eyebrow">Durante a sessão</span>
+            <h3>Contexto, anotações e captura no mesmo workspace.</h3>
+            <p>Atenda online, presencialmente ou por upload autorizado, sem perder o vínculo com o paciente.</p>
+          </article>
+
+          <article class="journey-card">
+            <span class="card-icon"><svg class="icon"><use href="#icon-file"></use></svg></span>
+            <span class="eyebrow">Depois da sessão</span>
+            <h3>Revise antes de transformar apoio em registro.</h3>
+            <p>Transcrição, evolução, instrumentos e documentos ficam prontos para sua avaliação profissional.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section product-section" id="produto" aria-labelledby="product-title">
+        <div class="section-intro">
+          <span class="eyebrow">Conheça o produto por dentro</span>
+          <h2 id="product-title">Veja o que precisa da sua atenção — e continue de onde parou.</h2>
+          <p>As telas abaixo são representações sanitizadas da linguagem e dos fluxos reais do PsiRecord.</p>
+        </div>
+
+        <div class="product-bento">
+          <article class="showcase-card showcase-card-clinical">
+            <figure>
               <img
                 src="./assets/landing-visual-workspace.jpg"
                 width="1200"
                 height="760"
                 alt="Workspace clínico do PsiRecord com transcrição, evolução e instrumentos"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
               />
             </figure>
-            <div class="visual-card-copy">
-              <span>Workspace clínico</span>
-              <h3>Áudio, transcrição e evolução revisável</h3>
-              <p>A IA apoia o texto. A profissional decide o registro final.</p>
-              <div class="feature-tags" aria-label="Recursos do workspace">
-                <span>Online</span>
-                <span>Presencial</span>
-                <span>Upload</span>
-                <span>Instrumentos</span>
-              </div>
+            <div class="showcase-copy">
+              <span class="eyebrow">Workspace clínico</span>
+              <h3>Do áudio ao rascunho de evolução, sempre com revisão profissional.</h3>
+              <p>Áudio autorizado, anotações, instrumentos, transcrição, evolução e insights permanecem vinculados à sessão correta.</p>
             </div>
           </article>
 
-          <article class="visual-card">
-            <figure class="visual-frame">
+          <article class="showcase-card showcase-card-management">
+            <figure>
               <img
                 src="./assets/landing-visual-admin.jpg"
                 width="1200"
                 height="760"
-                alt="Tela administrativa do PsiRecord com financeiro, auditoria e métricas"
-                loading="eager"
+                alt="Área de gestão do PsiRecord com financeiro, auditoria e visão operacional"
+                loading="lazy"
                 decoding="async"
               />
             </figure>
-            <div class="visual-card-copy">
-              <span>Gestão</span>
-              <h3>Financeiro, site, plano e administração</h3>
-              <p>A operação fica perto da clínica, sem misturar papéis sensíveis.</p>
-              <div class="feature-tags" aria-label="Recursos administrativos">
-                <span>Financeiro</span>
-                <span>Site</span>
-                <span>Plano</span>
-                <span>Auditoria</span>
-              </div>
+            <div class="showcase-copy">
+              <span class="eyebrow">Gestão da prática</span>
+              <h3>Documentos, recebimentos e operação próximos da rotina clínica.</h3>
+              <p>Acompanhe o que sustenta o consultório sem transformar suporte em acesso livre ao conteúdo clínico.</p>
+            </div>
+          </article>
+
+          <article class="capabilities-card">
+            <div class="capabilities-heading">
+              <span class="eyebrow">Mais que prontuário</span>
+              <h3>Uma base para atender, registrar e organizar a prática.</h3>
+            </div>
+            <div class="capability-list">
+              <div><svg class="icon"><use href="#icon-file"></use></svg><span><strong>Documentos revisáveis</strong><small>Modelos, placeholders, prévia, identidade e exportação.</small></span></div>
+              <div><svg class="icon"><use href="#icon-wallet"></use></svg><span><strong>Financeiro operacional</strong><small>Contas, pagamentos, ajustes, cobrança e relatórios.</small></span></div>
+              <div><svg class="icon"><use href="#icon-site"></use></svg><span><strong>Presença profissional</strong><small>Página própria e contatos com autorização explícita.</small></span></div>
+              <div><svg class="icon"><use href="#icon-users"></use></svg><span><strong>Equipe com limites claros</strong><small>Agenda e confirmações sem expor o prontuário por padrão.</small></span></div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section product-map module-map" id="operacao" aria-labelledby="operations-title">
-        <div class="section-heading">
-          <span class="eyebrow">Mapa de módulos</span>
-          <h2 id="operations-title">Tudo que sustenta o atendimento, agrupado por rotina</h2>
+      <section class="section workflow-section" id="como-funciona" aria-labelledby="workflow-title">
+        <div class="section-intro section-intro-split">
+          <div>
+            <span class="eyebrow">O fluxo real da sessão</span>
+            <h2 id="workflow-title">Evolução clínica sem começar do zero.</h2>
+          </div>
+          <p>O sistema acompanha cada etapa, preserva o contexto e deixa explícito o que ainda depende da sua revisão.</p>
+        </div>
+
+        <ol class="workflow-rail">
+          <li><span>01</span><strong>Preparar</strong><p>Agenda, paciente, contexto e pendências.</p></li>
+          <li><span>02</span><strong>Atender</strong><p>Captura e anotações no mesmo workspace.</p></li>
+          <li><span>03</span><strong>Gerar</strong><p>Transcrição e rascunhos entram como apoio.</p></li>
+          <li><span>04</span><strong>Revisar</strong><p>Você edita, valida e decide o conteúdo.</p></li>
+          <li><span>05</span><strong>Concluir</strong><p>O registro final segue para o prontuário.</p></li>
+        </ol>
+      </section>
+
+      <section class="section team-section" aria-labelledby="team-title">
+        <div class="team-copy">
+          <span class="eyebrow eyebrow-inverse">Para consultórios e clínicas</span>
+          <h2 id="team-title">Delegue a operação sem abrir o prontuário para quem não precisa vê-lo.</h2>
           <p>
-            Menos telas espalhadas. Mais continuidade entre clínica, documentos e operação.
+            Convide a secretaria para acompanhar agenda e confirmações com acesso restrito. Perfis administrativos cuidam de usuários, vínculos e operação sem transformar suporte em acesso livre ao conteúdo clínico.
           </p>
+          <a class="button button-inverse" href="#seguranca">Entender os controles <svg class="icon"><use href="#icon-arrow"></use></svg></a>
         </div>
 
-        <div class="module-strip" aria-label="Módulos do PsiRecord por área">
-          <article>
-            <span>Clínica</span>
-            <h3>Paciente e prontuário</h3>
-            <div class="module-chip-list">
-              <span>Ficha</span>
-              <span>Anamnese</span>
-              <span>Histórico</span>
-              <span>Contextos</span>
-              <span>Consentimentos</span>
-            </div>
-          </article>
-          <article>
-            <span>Atendimento</span>
-            <h3>Sessão e evolução</h3>
-            <div class="module-chip-list">
-              <span>Agenda</span>
-              <span>Captura</span>
-              <span>Transcrição</span>
-              <span>Evolução</span>
-              <span>Instrumentos</span>
-            </div>
-          </article>
-          <article>
-            <span>Documentos</span>
-            <h3>Modelos e exportação</h3>
-            <div class="module-chip-list">
-              <span>CFP</span>
-              <span>Placeholders</span>
-              <span>Preview</span>
-              <span>Relatórios</span>
-              <span>Identidade</span>
-            </div>
-          </article>
-          <article>
-            <span>Operação</span>
-            <h3>Gestão e crescimento</h3>
-            <div class="module-chip-list">
-              <span>Financeiro</span>
-              <span>Meu site</span>
-              <span>Plano IA</span>
-              <span>Secretaria</span>
-              <span>Admin</span>
-            </div>
-          </article>
+        <div class="access-card" aria-label="Exemplo de separação de acessos">
+          <div class="access-card-header"><span>Acesso por função</span><strong>Secretaria</strong></div>
+          <div class="access-row"><span><svg class="icon"><use href="#icon-calendar"></use></svg> Agenda e confirmações</span><strong class="status-allowed">Permitido</strong></div>
+          <div class="access-row"><span><svg class="icon"><use href="#icon-file"></use></svg> Conteúdo do prontuário</span><strong class="status-restricted">Restrito</strong></div>
+          <div class="access-row"><span><svg class="icon"><use href="#icon-shield"></use></svg> Ações sensíveis</span><strong class="status-audited">Auditadas</strong></div>
+          <p>Permissões seguem o papel de cada pessoa e podem ser revisadas pela gestão.</p>
         </div>
       </section>
 
-      <section class="section" id="fluxo" aria-labelledby="flow-title">
-        <div class="flow-layout">
-          <div class="section-heading sticky">
-            <span class="eyebrow">Fluxo clínico</span>
-            <h2 id="flow-title">Da agenda ao registro final, sem trocar de contexto</h2>
-            <p>
-              A sequência acompanha a rotina real e mantém a revisão humana no centro.
-            </p>
-            <a class="primary-button inline-cta" href="#contato">Quero conhecer</a>
-          </div>
-
-          <div class="workflow-list expanded-workflow">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>Planeje a agenda</h3>
-                <p>Pacientes, recorrência, conflitos e confirmações ficam visíveis antes do atendimento.</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>Atenda no workspace</h3>
-                <p>Capture online, presencialmente ou por upload, com anotações e status na mesma tela.</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>Revise a IA</h3>
-                <p>Transcrição, evolução e insights entram como apoio revisável, não como decisão automática.</p>
-              </div>
-            </article>
-            <article>
-              <span>04</span>
-              <div>
-                <h3>Feche o registro</h3>
-                <p>Ficha, instrumentos, documentos e relatórios seguem com trilha de revisão.</p>
-              </div>
-            </article>
-            <article>
-              <span>05</span>
-              <div>
-                <h3>Cuide da operação</h3>
-                <p>Financeiro, plano, site, papéis e auditoria continuam conectados ao fluxo.</p>
-              </div>
-            </article>
-          </div>
+      <section class="section safety-section" id="seguranca" aria-labelledby="safety-title">
+        <div class="safety-copy">
+          <span class="eyebrow">Segurança clínica e privacidade</span>
+          <h2 id="safety-title">Privacidade tratada como parte do fluxo, não como nota de rodapé.</h2>
+          <p>O PsiRecord oferece controles técnicos para apoiar uma operação responsável. A conformidade também depende dos processos e das escolhas da clínica.</p>
+          <a class="text-link" href="./politica-de-privacidade/index.html">Ler a política de privacidade <svg class="icon"><use href="#icon-arrow"></use></svg></a>
         </div>
-      </section>
 
-      <section class="section outcomes" aria-labelledby="outcomes-title">
-        <div class="outcomes-copy">
-          <span class="eyebrow">Resultado</span>
-          <h2 id="outcomes-title">Menos dispersão. Mais continuidade entre atendimento, documento e gestão.</h2>
-          <p>
-            O ganho aparece quando a sessão, o documento e a operação deixam de viver em lugares diferentes.
-          </p>
-        </div>
-        <div class="outcome-board" aria-label="Benefícios principais">
-          <div>
-            <strong>Registro</strong>
-            <span>Áudio, transcrição, evolução e prontuário no mesmo contexto.</span>
-          </div>
-          <div>
-            <strong>Rotina</strong>
-            <span>Agenda, confirmações e revisões sem planilha paralela.</span>
-          </div>
-          <div>
-            <strong>Documentos</strong>
-            <span>Modelos, identidade, preview e exportação revisável.</span>
-          </div>
-          <div>
-            <strong>Gestão</strong>
-            <span>Financeiro, plano, site, usuários e auditoria.</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section privacy" id="cuidado" aria-labelledby="privacy-title">
-        <div class="privacy-layout">
-          <div class="section-heading">
-            <span class="eyebrow">Segurança clínica e LGPD</span>
-            <h2 id="privacy-title">Apoio inteligente, responsabilidade preservada</h2>
-            <p>
-              O produto foi desenhado para apoiar, registrar e auditar sem transformar IA em decisão clínica.
-            </p>
-          </div>
-
-          <div class="privacy-list safety-grid">
-            <article>
-              <strong>Você aprova o registro final</strong>
-              <p>Rascunhos só viram registro depois de revisão profissional.</p>
-            </article>
-            <article>
-              <strong>Instrumentos apoiam triagem</strong>
-              <p>Pontuações e faixas não substituem avaliação clínica.</p>
-            </article>
-            <article>
-              <strong>Dados públicos ficam sanitizados</strong>
-              <p>Site profissional e leads ficam separados do prontuário.</p>
-            </article>
-            <article>
-              <strong>Ações sensíveis são rastreáveis</strong>
-              <p>Exportações, suporte e papéis exigem permissão e auditoria.</p>
-            </article>
-          </div>
+        <div class="safety-list">
+          <article><span class="card-icon"><svg class="icon"><use href="#icon-spark"></use></svg></span><div><h3>A IA prepara material. Você decide o registro.</h3><p>Rascunhos e pontuações não são apresentados como diagnóstico ou decisão clínica automática.</p></div></article>
+          <article><span class="card-icon"><svg class="icon"><use href="#icon-users"></use></svg></span><div><h3>Acesso separado por papel.</h3><p>Rotinas de agenda, suporte e administração seguem limites adequados a cada função.</p></div></article>
+          <article><span class="card-icon"><svg class="icon"><use href="#icon-lock"></use></svg></span><div><h3>Site e leads separados do prontuário.</h3><p>A presença pública da profissional não publica informações clínicas de pacientes.</p></div></article>
+          <article><span class="card-icon"><svg class="icon"><use href="#icon-shield"></use></svg></span><div><h3>Ações sensíveis com rastreabilidade.</h3><p>Exportações, permissões e suporte exigem controles e deixam trilha de auditoria.</p></div></article>
         </div>
       </section>
 
       <section class="section final-cta" id="contato" aria-labelledby="contact-title">
-        <div>
-          <span class="eyebrow">Produto em evolução contínua</span>
-          <h2 id="contact-title">Veja como o PsiRecord pode organizar a rotina clínica, documental e operacional da sua prática.</h2>
+        <div class="final-cta-copy">
+          <span class="eyebrow">Conheça o PsiRecord</span>
+          <h2 id="contact-title">Sua rotina clínica pode ter mais continuidade — sem tirar você do centro.</h2>
+          <p>Converse pelo WhatsApp e veja como o PsiRecord pode se encaixar no seu consultório ou clínica.</p>
         </div>
-        <a
-          class="primary-button large"
-          href="https://wa.me/5551998961483?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20PsiRecord."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Conversar sobre o PsiRecord
-        </a>
+        <div class="final-cta-actions">
+          <a
+            class="button button-primary button-large"
+            href="https://wa.me/5551998961483?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20PsiRecord."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quero conhecer o PsiRecord
+            <svg class="icon"><use href="#icon-arrow"></use></svg>
+          </a>
+          <span>Atendimento comercial pelo WhatsApp</span>
+        </div>
       </section>
 
-      <section class="section faq" id="duvidas" aria-labelledby="faq-title">
-        <div class="section-heading">
-          <span class="eyebrow">Dúvidas</span>
-          <h2 id="faq-title">Perguntas frequentes</h2>
+      <section class="section faq-section" id="duvidas" aria-labelledby="faq-title">
+        <div class="section-intro">
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2 id="faq-title">O que vale saber antes de conhecer o produto.</h2>
         </div>
 
         <div class="faq-list">
           <details>
-            <summary>O PsiRecord substitui minha decisão clínica?</summary>
-            <p>Não. Ele organiza, transcreve e sugere apoio textual, mas a decisão final é sua.</p>
+            <summary>A IA decide diagnóstico ou conduta?</summary>
+            <p>Não. Transcrições, evoluções, insights e pontuações são materiais de apoio e exigem revisão profissional.</p>
           </details>
           <details>
-            <summary>Quais módulos existem hoje?</summary>
-            <p>Agenda, pacientes, prontuário, sessões, IA revisável, instrumentos, modelos, financeiro, site, plano, usuários e admin.</p>
+            <summary>Funciona para atendimento online e presencial?</summary>
+            <p>Sim. O fluxo suporta captura online pela extensão, microfone presencial autorizado e upload manual de áudio.</p>
           </details>
           <details>
-            <summary>Ele atende presencial e online?</summary>
-            <p>Sim. Funciona com captura online, microfone presencial autorizado ou upload manual.</p>
+            <summary>A secretaria consegue ver o prontuário?</summary>
+            <p>Não por padrão. O papel de secretaria é restrito à agenda e às confirmações.</p>
           </details>
           <details>
-            <summary>Os instrumentos clínicos fazem diagnóstico automático?</summary>
-            <p>Não. Eles ajudam na triagem e no monitoramento, sempre com revisão humana.</p>
+            <summary>Preciso usar o Google Calendar?</summary>
+            <p>Não. A integração é opcional e a agenda do PsiRecord continua funcionando de forma independente.</p>
           </details>
           <details>
-            <summary>Secretaria consegue ver prontuário?</summary>
-            <p>Não por padrão. O papel existe para agenda e confirmações com menor privilégio.</p>
+            <summary>O financeiro substitui um sistema fiscal?</summary>
+            <p>Não. Ele é operacional e acompanha contas, pagamentos, ajustes, cobranças e relatórios.</p>
           </details>
           <details>
-            <summary>O painel administrativo acessa tudo livremente?</summary>
-            <p>Não. Ações sensíveis exigem papel adequado, justificativa e auditoria.</p>
+            <summary>O PsiRecord garante conformidade automática com a LGPD?</summary>
+            <p>Não. O produto oferece controles técnicos de acesso, minimização, auditoria e direitos da pessoa titular, mas conformidade também depende dos processos da clínica.</p>
+          </details>
+          <details>
+            <summary>Como conheço os planos?</summary>
+            <p>Converse pelo WhatsApp para conhecer a solução e as condições disponíveis.</p>
           </details>
         </div>
       </section>
     </main>
 
     <footer class="site-footer" aria-label="Rodapé">
-      <a href="./politica-de-privacidade/index.html">Política de privacidade</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand brand-inverse" href="#inicio" aria-label="PsiRecord — início">
+            <img src="./assets/psirecord-mark.svg" width="36" height="36" alt="" aria-hidden="true" />
+            <span><strong>PsiRecord</strong><small>Clínica em fluxo</small></span>
+          </a>
+          <p>Da agenda ao registro final, uma rotina conectada para profissionais de psicologia.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Produto</strong>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#produto">Por dentro do sistema</a>
+          <a href="#como-funciona">Como funciona</a>
+        </div>
+        <div class="footer-links">
+          <strong>Acesso e contato</strong>
+          <a href="https://sistema.psirecord.com.br/login">Entrar no sistema</a>
+          <a href="https://wa.me/5551998961483?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20PsiRecord." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a>
+          <a href="./politica-de-privacidade/index.html">Política de privacidade</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> PsiRecord</span>
+        <span>Feito para a rotina da psicologia.</span>
+      </div>
     </footer>
 
     <script src="./script.js"></script>

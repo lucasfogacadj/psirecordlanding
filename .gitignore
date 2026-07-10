@@ -50,6 +50,7 @@ lerna-debug.log*
 # Test and coverage output
 coverage/
 .nyc_output/
+output/
 playwright-report/
 test-results/
 cypress/screenshots/

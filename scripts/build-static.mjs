@@ -11,11 +11,12 @@ const requiredEntries = [
   "script.js",
   "robots.txt",
   "sitemap.xml",
+  "_headers",
   "politica-de-privacidade",
   "assets",
 ];
 
-const optionalEntries = ["_headers", "_redirects"];
+const optionalEntries = ["_redirects"];
 
 async function copyEntry(entry) {
   const source = path.join(rootDir, entry);
